@@ -1,0 +1,46 @@
+@use "vars" as *;
+%container {
+  width: 80%;
+  padding: 0 10%;
+}
+
+%flexDisplay {
+  display: flex;
+  justify-content: space-between;
+}
+%social-block {
+  i {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #eee;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 5px;
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 600ms ease;
+
+    &:hover {
+      color: $mainColor;
+      transform: translateY(-5px);
+    }
+  }
+}
+%heading-with-line {
+  color: #000;
+  letter-spacing: 2px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background: $mainColor;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+  }
+}
